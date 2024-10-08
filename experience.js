@@ -10,9 +10,5 @@ function toggleDetails(companyId) {
     });
 
     // Toggle the clicked company's details
-    if (details.style.display === 'block') {
-        details.style.display = 'none';
-    } else {
-        details.style.display = 'block';
-    }
+    details.style.display = (details.style.display === 'block') ? 'none' : 'block';
 }
