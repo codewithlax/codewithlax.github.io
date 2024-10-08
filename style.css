@@ -64,18 +64,6 @@ body {
     animation: fadeIn 1.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
-hero-text {
-    color: white; /* Change the color of your name to white */
-    font-size: 5rem;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-.hero-text {
-    color: white; /* Change the color of your name to white */
-    font-size: 5rem;
-    animation: fadeInDown 1s ease-in-out;
-}
-
 
 h1 {
     color: white; /* Change the color of your name to white */
@@ -188,7 +176,6 @@ ul {
     animation-delay: 0.6s;
 }
 
-
 /* Skill hover effects */
 ul li {
     color: #ffffff;
@@ -203,4 +190,32 @@ ul li {
 ul li:hover {
     transform: scale(1.05);
     background: linear-gradient(45deg, #004e92, #000428);
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 3rem; /* Smaller font size for mobile */
+    }
+    .subtitle {
+        font-size: 1.2rem; /* Smaller subtitle font size */
+    }
+    .intro {
+        font-size: 1rem; /* Smaller intro font size */
+    }
+    .content {
+        padding: 20px 10px; /* Less padding on mobile */
+    }
+    h2 {
+        font-size: 1.5rem; /* Smaller h2 font size for mobile */
+    }
+    .cta-button {
+        padding: 10px 20px; /* Smaller button size */
+    }
+    ul {
+        padding-left: 15px; /* Adjust padding for ul */
+    }
+    .timeline-item {
+        padding: 15px; /* Smaller padding in timeline items */
+    }
 }
