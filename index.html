@@ -38,26 +38,46 @@
             </div>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Srinsoft Canada</h3>
-                    <p>Machine Learning Engineer | Aug 2023 – Sept 2024</p>
-                    <p>Led development of a comprehensive Marketing Mix Model for an international Hair Care brand, optimizing sales using advanced machine learning techniques.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>Rogers Communications</h3>
-                    <p>Data Analyst | Dec 2021 – Apr 2023</p>
-                    <p>Enhanced HFC network insights and visualizations using PowerBI and automated data-cleaning processes for optimal business decision-making.</p>
-                </div>
-                <div class="timeline-item">
-                    <h3>UST</h3>
-                    <p>Machine Learning Engineer (NLP) | Apr 2018 – Aug 2021</p>
-                    <p>Developed multi-million-dollar solutions in NLP, winning national awards for innovative health-tech solutions for a Fortune 500 healthcare company.</p>
-                </div>
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="card-container">
+            <div class="card" onclick="toggleDetails('srinsoft')">
+                <img src="path/to/srinsoft-logo.png" alt="Srinsoft Canada Logo" class="company-logo">
+                <div class="card-preview">Data Scientist</div>
             </div>
-        </section>
+            <div class="details" id="srinsoft">
+                <p>• Led the development of a comprehensive Marketing Mix Model (MMM) for a top international Hair Care Brand...</p>
+                <!-- Add remaining bullet points here -->
+            </div>
+    
+            <div class="card" onclick="toggleDetails('rogers')">
+                <img src="path/to/rogers-logo.png" alt="Rogers Communications Logo" class="company-logo">
+                <div class="card-preview">Data Analyst</div>
+            </div>
+            <div class="details" id="rogers">
+                <p>• Enhanced existing Hybrid Fiber Coaxial (HFC) network insights by improvising data-cleaning...</p>
+                <!-- Add remaining bullet points here -->
+            </div>
+    
+            <div class="card" onclick="toggleDetails('ust')">
+                <img src="path/to/ust-logo.png" alt="UST Logo" class="company-logo">
+                <div class="card-preview">Machine Learning Engineer (NLP) | Full Stack</div>
+            </div>
+            <div class="details" id="ust">
+                <p>• Key Developer on the “10x Engineering team,” delivering NLP-based Machine Learning...</p>
+                <!-- Add remaining bullet points here -->
+            </div>
+    
+            <div class="card" onclick="toggleDetails('tech-mahindra')">
+                <img src="path/to/tech-mahindra-logo.png" alt="Tech Mahindra Logo" class="company-logo">
+                <div class="card-preview">Technical Support Associate</div>
+            </div>
+            <div class="details" id="tech-mahindra">
+                <p>• Provided technical networking-related support to one of Australia's largest telecommunications networks...</p>
+                <!-- Add remaining bullet points here -->
+            </div>
+        </div>
+    </section>
 
         <section id="education">
             <h2>Education</h2>
@@ -91,7 +111,7 @@
             </ul>
             <h3>Images of Certifications</h3>
             <div class="image-gallery">
-                <img src=Databricks certified GEN AI.png" alt="Certification 1" style="width: 100%; max-width: 200px;">
+                <img src="Databricks certified GEN AI.png" alt="Certification 1" style="width: 100%; max-width: 200px;">
                 <img src="DP-100.png" alt="Certification 2" style="width: 100%; max-width: 200px;">
             </div>
         </section>
