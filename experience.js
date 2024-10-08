@@ -1,18 +1,18 @@
-const companyItems = document.querySelectorAll('.company-item');
-const detailsSections = document.querySelectorAll('.details');
+function toggleDetails(companyId) {
+    const details = document.getElementById(companyId);
+    const allDetails = document.querySelectorAll('.details');
 
-companyItems.forEach(item => {
-    item.addEventListener('mouseover', function() {
-        const targetId = item.getAttribute('data-company');
-        
-        detailsSections.forEach(detail => {
-            if (detail.id === targetId) {
-                detail.classList.add('active');
-                detail.classList.remove('hidden');
-            } else {
-                detail.classList.remove('active');
-                detail.classList.add('hidden');
-            }
-        });
+    // Hide all other details
+    allDetails.forEach(detail => {
+        if (detail !== details) {
+            detail.style.display = 'none';
+        }
     });
-});
+
+    // Toggle the clicked company's details
+    if (details.style.display === 'block') {
+        details.style.display = 'none';
+    } else {
+        details.style.display = 'block';
+    }
+}
