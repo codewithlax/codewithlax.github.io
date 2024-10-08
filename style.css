@@ -66,6 +66,7 @@ body {
 }
 
 /* Update h2 style for header */
+/* Header Style */
 h2 {
     font-size: 2.5rem; /* Slightly larger font */
     color: #f0f0f0;
@@ -82,6 +83,42 @@ h2::after {
     height: 3px; /* Height of the underline */
     background-color: #ffffff; /* Color of the underline */
     margin: 10px auto; /* Center the underline */
+}
+
+/* Skills container styling */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px 10%; /* Padding for container */
+}
+
+/* Individual skill card style */
+.skill-card {
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Depth effect */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out; /* Animation effects */
+}
+
+/* Card hover effect */
+.skill-card:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
+    background: rgba(255, 255, 255, 0.2); /* Change background on hover */
+}
+
+/* Heading style for cards */
+.skill-card h3 {
+    font-size: 1.5rem; /* Font size for category headings */
+    color: #ffffff; /* White color for text */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Paragraph style within cards */
+.skill-card p {
+    color: #e0e0e0; /* Lighter color for descriptions */
+    line-height: 1.6; /* Better line spacing */
 }
 
 /* Style for each section */
