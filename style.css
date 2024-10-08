@@ -65,6 +65,12 @@ body {
     animation-delay: 0.5s;
 }
 
+h1 {
+    color: white; /* Change the color of your name to white */
+    font-size: 5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
 h2 {
     font-size: 2rem;
     color: #f0f0f0;
@@ -168,4 +174,21 @@ ul {
 
 .timeline-item:nth-child(even) {
     animation-delay: 0.6s;
+}
+
+
+/* Skill hover effects */
+ul li {
+    color: #ffffff;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 5px;
+    background: linear-gradient(45deg, #000428, #004e92);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #004e92, #000428);
 }
