@@ -64,6 +64,18 @@ body {
     animation: fadeIn 1.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
+hero-text {
+    color: white; /* Change the color of your name to white */
+    font-size: 5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-text {
+    color: white; /* Change the color of your name to white */
+    font-size: 5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
 
 h1 {
     color: white; /* Change the color of your name to white */
