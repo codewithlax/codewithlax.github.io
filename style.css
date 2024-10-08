@@ -230,6 +230,15 @@ ul li:hover {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+.details {
+    background-color: transparent; /* Matches the background */
+    color: white; /* Keep text readable */
+    max-height: 200px; /* Scroll will appear if the content exceeds this height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    scroll-behavior: smooth; /* Add smooth scrolling */
+}
+
 .company-list li:hover {
     color: #1e90ff; /* Blue gradient on hover */
     cursor: pointer;
