@@ -176,6 +176,24 @@ ul {
     animation-delay: 0.6s;
 }
 
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line */
+    justify-content: space-around; /* Spaces images evenly */
+    margin-top: 15px; /* Space above the image gallery */
+}
+
+.image-gallery img {
+    border-radius: 8px; /* Add rounded corners */
+    margin: 5px; /* Space between images */
+    transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+
 /* Skill hover effects */
 ul li {
     color: #ffffff;
