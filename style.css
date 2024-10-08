@@ -24,7 +24,7 @@ body {
 
 .hero-text {
     font-size: 4rem;
-    color: #0a0a23; /* Blends with background */
+    color: white; /* Blends with background */
     -webkit-text-stroke: 1px #004e92; /* Stroke effect for visibility */
     animation: slideUp 1.5s ease-in-out forwards;
 }
