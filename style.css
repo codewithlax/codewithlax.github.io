@@ -65,42 +65,59 @@ body {
     animation-delay: 0.5s;
 }
 
+/* Update h2 style for header */
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem; /* Slightly larger font */
     color: #f0f0f0;
     margin-bottom: 20px;
+    position: relative; /* For positioning underline */
+    padding-bottom: 5px; /* Space for underline */
 }
 
-/* Full-Height Sections */
+/* Underline effect for the header */
+h2::after {
+    content: '';
+    display: block;
+    width: 50px; /* Width of the underline */
+    height: 3px; /* Height of the underline */
+    background-color: #ffffff; /* Color of the underline */
+    margin: 10px auto; /* Center the underline */
+}
+
+/* Style for each section */
 section {
-    height: 80vh; /* 80% of viewport height */
+    height: 80vh; /* Keep the height */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-bottom: 2px solid #ffffff; /* White line to distinguish sections */
+    padding: 20px 0; /* Padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
 }
 
-/* Styles for the skills section */
+/* Adjust the existing ul styles for better spacing */
 ul {
-    list-style-type: disc;
-    margin-left: 20px;
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 10px 0; /* Add margin */
 }
 
+/* Style for each skill item */
 ul li {
     color: #ffffff;
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 5px;
-    background: linear-gradient(45deg, #000428, #004e92);
+    background: rgba(255, 255, 255, 0.1); /* Light transparent background */
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    padding: 10px; /* Padding inside the skill items */
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
 ul li:hover {
     transform: scale(1.05);
-    background: linear-gradient(45deg, #004e92, #000428);
+    background: rgba(255, 255, 255, 0.3); /* Change background on hover */
 }
+
 
 .experience-container {
     display: flex;
