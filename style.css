@@ -18,15 +18,14 @@ body {
     justify-content: center;
     text-align: center;
     color: #fff;
-    opacity: 0;
-    animation: fadeIn 1.5s ease-in-out forwards;
+    padding: 0 10%; /* Reduce horizontal margin */
 }
 
 .hero-text {
     font-size: 4rem;
-    color: #0a0a23; /* Blends with background */
-    -webkit-text-stroke: 1px #004e92; /* Stroke effect for visibility */
-    animation: slideUp 1.5s ease-in-out forwards;
+    color: #ffffff; /* Make name white */
+    -webkit-text-stroke: 1px #004e92; 
+    animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .subtitle {
@@ -64,153 +63,17 @@ body {
     animation: fadeIn 1.5s ease-in-out forwards;
     animation-delay: 0.5s;
 }
-hero-text {
-    color: white; /* Change the color of your name to white */
-    font-size: 5rem;
-    animation: fadeInDown 1s ease-in-out;
-}
 
-.hero-text {
-    color: white; /* Change the color of your name to white */
-    font-size: 5rem;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-
-h1 {
-    color: white; /* Change the color of your name to white */
-    font-size: 5rem;
-    animation: fadeInDown 1s ease-in-out;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #f0f0f0;
-    margin-bottom: 20px;
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-}
-
-.skill-card {
-    background-color: #1f1f3d;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2rem;
-    transition: transform 0.3s ease;
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slideUp 0.8s ease-in-out forwards;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-}
-
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.timeline-item {
-    background-color: #1f1f3d;
-    padding: 20px;
-    border-radius: 8px;
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slideUp 0.8s ease-in-out forwards;
-}
-
-.timeline-item h3 {
-    font-size: 1.5rem;
-    color: #00acee;
-}
-
-.timeline-item p {
-    margin: 10px 0;
-    line-height: 1.6;
-}
-
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.contact-info a {
-    color: #00acee;
-    text-decoration: none;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Delay the slideUp animation for skill cards and timeline */
-.skill-card:nth-child(odd) {
-    animation-delay: 0.3s;
-}
-
-.skill-card:nth-child(even) {
-    animation-delay: 0.6s;
-}
-
-.timeline-item:nth-child(odd) {
-    animation-delay: 0.3s;
-}
-
-.timeline-item:nth-child(even) {
-    animation-delay: 0.6s;
-}
-
-
-/* Skill hover effects */
-ul li {
-    color: #ffffff;
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 5px;
-    background: linear-gradient(45deg, #000428, #004e92);
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-ul li:hover {
-    transform: scale(1.05);
-    background: linear-gradient(45deg, #004e92, #000428);
-}
-
-
+/* Experience Section */
 .experience-container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    width: 100%; /* Maximize space */
+    padding: 20px;
+    gap: 20px; /* Add spacing */
 }
+
 .company-details {
     width: 65%;
     padding-left: 20px;
@@ -231,20 +94,53 @@ ul li:hover {
 }
 
 .details {
-    background-color: transparent; /* Matches the background */
-    color: white; /* Keep text readable */
-    max-height: 200px; /* Scroll will appear if the content exceeds this height */
-    overflow-y: auto; /* Enable vertical scrolling */
+    background-color: transparent;
+    color: white;
+    max-height: 250px;
+    overflow-y: auto;
     padding: 10px;
-    scroll-behavior: smooth; /* Add smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 .company-list li:hover {
-    color: #1e90ff; /* Blue gradient on hover */
-    cursor: pointer;
+    color: #1e90ff;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
 }
+
+/* Section Visibility Overlap */
+section {
+    margin: 50px 0; 
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+section.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+section:not(.active) {
+    opacity: 0.3; /* Slight fade when not in view */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .company-details, .company-list {
+        width: 100%;
+    }
+
+    .hero-text {
+        font-size: 2.5rem;
+    }
+}
+
