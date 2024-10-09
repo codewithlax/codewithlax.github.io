@@ -2,7 +2,7 @@
 const companyCards = document.querySelectorAll('.company-card');
 const companyContents = document.querySelectorAll('.company-content');
 
-// Function to show content on hover
+// Function to show content on hover or click
 companyCards.forEach(card => {
     card.addEventListener('mouseenter', function() {
         // Get the associated company content ID
@@ -14,18 +14,11 @@ companyCards.forEach(card => {
         // Show the content of the hovered company
         document.getElementById(companyId).classList.add('active');
     });
-});
 
-// Keep the content visible on click
-companyCards.forEach(card => {
     card.addEventListener('click', function() {
-        // Get the associated company content ID
+        // Same as hover functionality, but ensures the content remains visible
         const companyId = this.getAttribute('data-company');
-
-        // Hide all other company contents
         companyContents.forEach(content => content.classList.remove('active'));
-
-        // Show the content of the clicked company
         document.getElementById(companyId).classList.add('active');
     });
 });
