@@ -1,21 +1,19 @@
-function toggleDetails(companyId) {
-    const details = document.getElementById(companyId);
-    const allDetails = document.querySelectorAll('.details');
+// Get all the company cards and contents
+const companyCards = document.querySelectorAll('.company-card');
+const companyContents = document.querySelectorAll('.company-content');
 
-    // Hide all other details
-    allDetails.forEach(detail => {
-        if (detail !== details) {
-            detail.style.display = 'none';
-        }
+// Add click event listener to each card
+companyCards.forEach(card => {
+    card.addEventListener('click', function() {
+        // Get the company ID from data attribute
+        const companyId = this.getAttribute('data-company');
+        
+        // Hide all company contents
+        companyContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Show the clicked company's content
+        document.getElementById(companyId).classList.add('active');
     });
-
-    // Toggle the clicked company's details
-    details.style.display = (details.style.display === 'block') ? 'none' : 'block';
-}
-
-
-// Scroll to the experience section when "Explore My Work" is clicked
-document.getElementById('explore-button').addEventListener('click', function() {
-    const experienceSection = document.getElementById('experience-section');
-    experienceSection.scrollIntoView({ behavior: 'smooth' });
 });
