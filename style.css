@@ -9,10 +9,51 @@ body {
     background-color: #0a0a23;
     color: #f0f0f0;
 }
-#experience {
-    padding: 20px;
-    background-color: #1e1e1e; /* Dark background */
+/* Experience section overall layout */
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%; /* Allow the section to take 90% of the screen width */
+    margin: 0 auto; /* Center the section */
 }
+
+/* Experience card styling */
+.experience-card {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+/* Hover effect for experience cards */
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Experience details */
+.experience-details {
+    margin-top: 10px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+}
+
+/* Adjusting the layout for larger screens */
+@media (min-width: 768px) {
+    .experience-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic grid to adjust based on screen size */
+        gap: 20px; /* Space between the cards */
+        max-width: 95%; /* Utilize more of the screen width */
+    }
+}
+
 
 .card-container {
     display: flex;
