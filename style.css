@@ -14,7 +14,7 @@ body {
     color: #f0f0f0;
 }
 /* Experience section overall layout */
-.experience-section {
+/* .experience-section {
     display: flex;
     flex-direction: column;
     max-width: 90%; /* Allow the section to take 90% of the screen width */
@@ -46,7 +46,60 @@ body {
     padding: 10px;
     border-radius: 4px;
     display: none; /* Hidden by default */
+} */
+
+
+
+
+.experience-container {
+    display: flex;
+    width: 100%;
+    height: 500px; /* Adjust height as needed */
 }
+
+/* Left Column - Company List */
+.company-list {
+    width: 30%; /* Adjust as needed */
+    background-color: #222; /* Dark background to match theme */
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Shadow on the right */
+    display: flex;
+    flex-direction: column;
+}
+
+.company-card {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.company-card:hover {
+    background-color: #444;
+}
+
+/* Right Column - Company Details */
+.company-details {
+    width: 70%; /* Adjust as needed */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #1e1e1e; /* Match the dark theme */
+}
+
+.company-content {
+    display: none; /* Hidden by default */
+    color: white;
+}
+
+/* Show the content that is active */
+.company-content.active {
+    display: block;
+}
+
 
 /* Adjusting the layout for larger screens */
 @media (min-width: 768px) {
